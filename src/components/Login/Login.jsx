@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { Formik } from "formik";
@@ -9,17 +9,27 @@ import FormDivider from "../FormDivider";
 
 import blueTransparent from "../../assets/blue_transparent.png";
 
+import PlayerApi from "../../service/playerApi";
+
 function Login() {
     const history = useHistory();
+    const [invalidLoginError, setInvalidLoginError] = useState(false);
+    const playerApi = new PlayerApi();
 
     const initialValues = {
         email: "",
         password: ""
     };
 
-    const onSubmit = () => {
+    const onSubmit = (values) => {
         // TODO: Connect to backend
-        history.push("/");
+        const verifiedPlayer = playerApi.getPlayerByEmail(values.email);
+
+        if (verifiedPlayer) {
+            history.push("/");
+        } else {
+            setInvalidLoginError(true);
+        }
     };
 
     const validationSchema = yup.object({
@@ -86,6 +96,18 @@ function Login() {
                                         {errors.password}
                                     </Form.Control.Feedback>
                                 </Form.Group>
+
+                                <div
+                                    style={{
+                                        color: "red",
+                                        paddingBottom: "0.5rem"
+                                    }}
+                                >
+                                    {invalidLoginError
+                                        ? "Email or Password is incorrect"
+                                        : ""}
+                                </div>
+
                                 <Button
                                     variant="primary"
                                     type="submit"
