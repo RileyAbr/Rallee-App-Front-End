@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import PlayerCard from "../PlayerCard";
-import MockPlayers from "../../mocks/mockplayers.json";
 import "./CardGallery.scss";
 
+import PlayerApi from "../../service/playerApi";
+
 const CardGallery = () => {
+    const playerApi = new PlayerApi();
+
+    const [galleryPlayers, setGalleryPlayers] = useState(
+        playerApi.getAllPlayers()
+    );
+
     return (
         <div className="card-gallery">
             {" "}
-            {MockPlayers.map((player, i) => {
+            {galleryPlayers.map((player, i) => {
                 return (
                     <PlayerCard
                         key={i}
