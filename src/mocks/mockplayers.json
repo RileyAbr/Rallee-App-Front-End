@@ -133,5 +133,80 @@
                 "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/dotarank0.png"
             }
         ]
+    },
+    {
+        "id": "6",
+        "firstName": "Poofy",
+        "lastName": "TheRagdollCat",
+        "email": "poofy@kittnes.com",
+        "bio": "I like cuddles and pets, but I will probably sit on your keyboard while you try to play video games. Oliver bullied me off other games, so I just play valorant now.",
+        "languages": ["English", "Arabic"],
+        "timezone": "(GMT-06:00) Central Time (US & Canada)",
+        "games": [
+            {
+                "game": "VALORANT",
+                "comp": "Casual",
+                "username": "poofy_kitty",
+                "rank": "Diamond 3",
+                "roles": ["Rifler", "Op'er"],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/valorant_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-3.jpg",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank18.png"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "firstName": "Blue",
+        "lastName": "TheHorse",
+        "email": "blue@teamliquid.com",
+        "bio": "Lets go Liquid!",
+        "languages": [
+            "English",
+            "Mandarin",
+            "Hindi",
+            "French",
+            "Spanish",
+            "Arabic"
+        ],
+        "timezone": "(GMT-06:00) Central Time (US & Canada)",
+        "games": [
+            {
+                "game": "League of Legends",
+                "comp": "Competitive",
+                "username": "blue",
+                "rank": "Challenger",
+                "roles": ["Top", "Jungle", "Mid", "ADC", "Support"],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/league_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/league-card-19.jpg",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/leaguerank27.png"
+            },
+            {
+                "game": "Dota2",
+                "comp": "Competitive",
+                "username": "TLBlue",
+                "rank": "Immortal",
+                "roles": [
+                    "Safe Lane",
+                    "Mid Lane",
+                    "Off Lane",
+                    "Soft Support",
+                    "Hard Support"
+                ],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/dota_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/dota-card-19.jpg",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/dotarank36.png"
+            },
+            {
+                "game": "VALORANT",
+                "comp": "Competitive",
+                "username": "TeamLiquid.Blue",
+                "rank": "Radiant",
+                "roles": ["Rifler", "Op'er"],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/valorant_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-12.jpg",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank22.png"
+            }
+        ]
     }
 ]
