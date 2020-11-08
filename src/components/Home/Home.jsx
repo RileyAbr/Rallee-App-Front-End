@@ -13,11 +13,9 @@ function Home() {
     const playerApi = new PlayerApi();
     const [filter, setFilter] = useState();
 
-    let exampleFilter = { game: "League of Legends" };
+    let exampleFilter = { game: "League of Legends", language: "Spanish" };
 
-    const [galleryPlayers] = useState(
-        playerApi.getAllFilteredGames(exampleFilter)
-    );
+    const [galleryPlayers] = useState(playerApi.getAllFilteredGames());
 
     return (
         <ContentPage>

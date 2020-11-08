@@ -94,8 +94,6 @@ class PlayerApi {
                 timezone === filters.timezone;
         }
 
-        console.log(filterParams);
-
         return filterArray(allGames, filterParams);
     }
 }
