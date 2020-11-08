@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Image, Button, Modal } from "react-bootstrap";
 import "./PlayerCard.scss";
 import EdgedCard from "../EdgedCard";
+import "../FilterBar/TimeZones.json";
 
 const PlayerCard = (props) => {
     const [show, setShow] = useState(false);
@@ -165,14 +166,15 @@ const PlayerCard = (props) => {
                                     style={{
                                         display: "flex",
                                         flexFlow: "column nowrap",
-                                        fontWeight: "bold"
+                                        fontWeight: "bold",
+                                        textAlign: "center"
                                     }}
                                 >
                                     {`${props.rank}`}
                                     <Image
                                         className="rank-medal"
                                         src={`${props.rankmedal}`}
-                                        width="75px"
+                                        width="100px"
                                     />{" "}
                                 </div>
                                 <div
