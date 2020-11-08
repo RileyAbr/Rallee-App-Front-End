@@ -54,7 +54,8 @@ class PlayerApi {
 
         this.mockPlayers.forEach((player) => {
             player.games.forEach((game) => {
-                gameProfiles.push(game);
+                const gameProfile = Object.assign({}, player, game);
+                gameProfiles.push(gameProfile);
             });
         });
 
