@@ -6,10 +6,10 @@ const CardGallery = (props) => {
     return (
         <div className="card-gallery">
             {" "}
-            {props.players.map((player, i) => {
+            {props.players.map((player) => {
                 return (
                     <PlayerCard
-                        key={i}
+                        key={player.id}
                         game={player.game}
                         gamelogo={player.gamelogo}
                         pic={player.pic}
@@ -22,6 +22,8 @@ const CardGallery = (props) => {
                         rank={player.rank}
                         rankmedal={player.rankmedal}
                         languages={player.languages}
+                        timezone={player.timezone}
+                        firstName={player.firstName}
                     />
                 );
             })}
