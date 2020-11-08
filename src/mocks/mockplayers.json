@@ -1,9 +1,10 @@
 [
     {
-        "username": "D.Boy9",
-        "name": "Riley",
+        "firstName": "Riley",
+        "lastName": "Abrahamson",
         "game": "League of Legends",
         "comp": "Casual",
+        "username": "D.Boy9",
         "bio": "Riley really likes coldstone cake batter ice cream. Riley really likes coldstone cake batter ice cream. Riley really likes coldstone cake batter ice cream. Riley really likes coldstone cake batter ice cream.",
         "roles": [
             "Safe Lane",
