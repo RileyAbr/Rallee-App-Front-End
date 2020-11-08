@@ -51,8 +51,7 @@ const PlayerCard = (props) => {
                                         display: "flex",
                                         flexFlow: "column nowrap",
                                         justifyContent: "flex-end",
-                                        alignItems: "flex-start",
-                                        fontSize: "0.9rem"
+                                        alignItems: "flex-start"
                                     }}
                                 >
                                     {props.roles &&
@@ -122,7 +121,7 @@ const PlayerCard = (props) => {
                                         fontWeight: "bold"
                                     }}
                                 >
-                                    {props.name}
+                                    {props.firstName}
                                 </span>{" "}
                                 -{" "}
                                 <span
@@ -211,7 +210,7 @@ const PlayerCard = (props) => {
                                 >
                                     Time Zone:
                                 </span>{" "}
-                                {props.zone}{" "}
+                                {props.timezone}{" "}
                             </div>
                         </div>
                         <div>
