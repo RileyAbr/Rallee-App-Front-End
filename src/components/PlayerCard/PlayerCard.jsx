@@ -64,7 +64,8 @@ const PlayerCard = (props) => {
                                     style={{
                                         display: "flex",
                                         flexFlow: "column nowrap",
-                                        justifyContent: "flex-end"
+                                        justifyContent: "flex-end",
+                                        fontWeight: "bold"
                                     }}
                                 >
                                     {`${props.rank}`}
@@ -101,14 +102,117 @@ const PlayerCard = (props) => {
                                 }}
                             >
                                 {`${props.username}`}{" "}
+                                <Image
+                                    style={{
+                                        paddingRight: "20px",
+                                        paddingTop: "5px",
+                                        height: "4rem",
+                                        float: "right"
+                                    }}
+                                    src={`${props.gamelogo}`}
+                                />
                             </div>
                             <div
                                 style={{
-                                    fontWeight: "bold",
                                     fontSize: "1.2rem"
                                 }}
-                            >{`${props.name}`}</div>
+                            >
+                                <span
+                                    style={{
+                                        fontWeight: "bold"
+                                    }}
+                                >
+                                    {props.name}
+                                </span>{" "}
+                                -{" "}
+                                <span
+                                    style={{
+                                        fontStyle: "italic"
+                                    }}
+                                >
+                                    {props.comp}
+                                </span>
+                            </div>
                             <div>{`${props.bio}`}</div>
+                            <div
+                                style={{
+                                    paddingTop: "5%",
+                                    display: "flex",
+                                    flexFlow: "row nowrap",
+                                    justifyContent: "space-between"
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexFlow: "column nowrap",
+                                        alignItems: "flex-start"
+                                    }}
+                                >
+                                    {" "}
+                                    <span
+                                        style={{
+                                            fontWeight: "bold"
+                                        }}
+                                    >
+                                        I play ...
+                                    </span>
+                                    {props.roles &&
+                                        props.roles.map((role, i) => {
+                                            return <div key={i}>{role}</div>;
+                                        })}
+                                </div>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexFlow: "column nowrap",
+                                        fontWeight: "bold"
+                                    }}
+                                >
+                                    {`${props.rank}`}
+                                    <Image
+                                        className="rank-medal"
+                                        src={`${props.rankmedal}`}
+                                        width="75px"
+                                    />{" "}
+                                </div>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexFlow: "column nowrap",
+                                        alignItems: "flex-start"
+                                    }}
+                                >
+                                    {" "}
+                                    <span
+                                        style={{
+                                            fontWeight: "bold"
+                                        }}
+                                    >
+                                        I speak ...
+                                    </span>
+                                    {props.languages &&
+                                        props.languages.map((language, i) => {
+                                            return (
+                                                <div key={i}>{language}</div>
+                                            );
+                                        })}
+                                </div>
+                            </div>
+                            <div
+                                style={{
+                                    paddingTop: "5%"
+                                }}
+                            >
+                                <span
+                                    style={{
+                                        fontWeight: "bold"
+                                    }}
+                                >
+                                    Time Zone:
+                                </span>{" "}
+                                {props.zone}{" "}
+                            </div>
                         </div>
                         <div>
                             <Button

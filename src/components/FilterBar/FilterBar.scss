@@ -3,11 +3,8 @@
 $filter-corner: 20px;
 
 .bar {
-    margin-top: 1.75rem;
     background-color: $yale-blue;
     padding: 0.5rem 1rem;
-    position: fixed;
-    margin-right: 2rem;
 
     clip-path: polygon(
         $filter-corner 0px,
@@ -18,15 +15,22 @@ $filter-corner: 20px;
         0 100%,
         0 $filter-corner
     );
+}
+
+.header {
+    font-size: 1.2rem;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+.drop-shadow {
+    margin-top: 1.75rem;
+    position: fixed;
+    margin-right: 2rem;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem $rich-black);
 
     @media only screen and (max-width: $tablet-width) {
         position: relative;
         margin-right: none;
         width: 100%;
     }
-}
-
-.header {
-    font-size: 1.2rem;
-    font-family: "Saira Stencil One", sans-serif;
 }
