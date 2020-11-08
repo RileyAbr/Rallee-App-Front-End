@@ -1,6 +1,6 @@
 import React from "react";
 import PlayerCard from "../PlayerCard";
-import MockPlayers from "../../mocks/mockplayers.json";
+import MockPlayers from "../../mocks/mockPlayers.json";
 import "./CardGallery.scss";
 
 const CardGallery = () => {
