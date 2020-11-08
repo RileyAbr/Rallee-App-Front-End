@@ -1,4 +1,4 @@
-import mockPlayers from "../mocks/mockPlayers.json";
+import mockPlayers from "../mocks/mockplayers.json";
 
 class PlayerApi {
     constructor() {
