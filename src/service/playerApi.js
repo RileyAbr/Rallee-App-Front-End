@@ -71,7 +71,32 @@ class PlayerApi {
             return allGames;
         }
 
-        return filterArray(allGames, filters);
+        // let filterParams = {
+        //     game: (game) => game === filters.game,
+        //     language: (languages) =>
+        //         languages.find((language) => language === filters.language),
+        //     timezone: (timezone) => timezone === filters.timezone
+        // };
+
+        let filterParams = {};
+
+        if (filters.game) {
+            filterParams["game"] = (game) => game === filters.game;
+        }
+
+        if (filters.language) {
+            filterParams["languages"] = (languages) =>
+                languages.find((language) => language === filters.language);
+        }
+
+        if (filters.timezone) {
+            filterParams["timezone"] = (timezone) =>
+                timezone === filters.timezone;
+        }
+
+        console.log(filterParams);
+
+        return filterArray(allGames, filterParams);
     }
 }
 
