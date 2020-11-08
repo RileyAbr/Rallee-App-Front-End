@@ -2,7 +2,6 @@ import React from "react";
 import PlayerCard from "../PlayerCard";
 import MockPlayers from "./mockplayers.json";
 import "./CardGallery.scss";
-import { Card } from "react-bootstrap";
 
 const CardGallery = () => {
     return (
