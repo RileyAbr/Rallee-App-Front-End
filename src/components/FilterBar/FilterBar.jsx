@@ -10,6 +10,7 @@ const FilterBar = () => {
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Game</label>
                     <select class="form-control" id="exampleFormControlSelect1">
+                        <option value="">None</option>
                         <option value="lol">League of Legends</option>
                         <option value="dota">Dota 2</option>
                         <option value="val">Valorant</option>
