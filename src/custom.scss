@@ -9,7 +9,9 @@ $theme-colors: (
     "primary": $yale-blue,
     "secondary": $byzantine,
     "info": $baby-powder,
-    "warning": $oxford-blue
+    "warning": $oxford-blue,
+    "danger": $byzantine,
+    "success": $aqua
 );
 
 // Body
@@ -17,9 +19,13 @@ $body-bg: $oxford-blue;
 $body-color: $baby-powder;
 
 // Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $header-font;
 }
