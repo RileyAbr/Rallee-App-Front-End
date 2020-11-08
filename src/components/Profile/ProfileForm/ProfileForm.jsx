@@ -8,7 +8,7 @@ import GameProfiles from "./GameProfiles";
 function ProfileForm(props) {
     return (
         <EdgedCardFormLarge>
-            <h2>Hello [Name], GLHF!</h2>
+            <h2>Hello {props.verifiedPlayer.firstName}, GLHF!</h2>
 
             <FormDivider />
 
