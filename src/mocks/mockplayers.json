@@ -208,5 +208,89 @@
                 "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank22.png"
             }
         ]
+    },
+    {
+        "id": "7",
+        "firstName": "Poofy",
+        "lastName": "TheRagdollCat",
+        "email": "poofy@kittnes.com",
+        "bio": "I like cuddles and pets, but I will probably sit on your keyboard while you try to play video games. Oliver bullied me off other games, so I just play valorant now.",
+        "languages": ["English", "Arabic"],
+        "timezone": "-6",
+        "games": [
+            {
+                "game": "VALORANT",
+                "comp": "Casual",
+                "username": "poofy_kitty",
+                "rank": "Diamond 3",
+                "roles": ["Rifler", "Op'er"],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/valorant_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-4.jpg",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank18.png"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "johndoe@gmail.com",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "languages": ["Spanish", "French", "Hindu"],
+        "timezone": "0",
+        "games": [
+            {
+                "game": "VALORANT",
+                "comp": "Casual",
+                "username": "johnny",
+                "rank": "Silver 3",
+                "roles": ["Op'er"],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/valorant_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-11.jpg",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank9.png"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "firstName": "Thomas",
+        "lastName": "Jefferson",
+        "email": "thomas.jeffy@gmail.com",
+        "bio": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        "languages": ["English", "Mandarin", "Spanish"],
+        "timezone": "-6",
+        "games": [
+            {
+                "game": "League of Legends",
+                "comp": "Competitive",
+                "username": "tommyjeffy",
+                "rank": "Platinum II",
+                "roles": ["ADC", "Top"],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/league_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/league-card-0.jpg",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/lolrank19.png"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "firstName": "Alexander",
+        "lastName": "Hamilton",
+        "email": "alex@hamilton.com",
+        "bio": "How does a bastard, orphan, son of a whore And a Scotsman, dropped in the middle of a forgotten spot In the Caribbean by providence impoverished In squalor, grow up to be a hero and a scholar?",
+        "languages": ["English", "Arabic"],
+        "timezone": "-6",
+        "games": [
+            {
+                "game": "Dota2",
+                "comp": "Casual",
+                "username": "hammy-ton",
+                "rank": "Crusader IV",
+                "roles": ["Soft Support", "Hard Support"],
+                "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/dota_logo.png",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/dota-card-2.png",
+                "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/dotarank14.png"
+            }
+        ]
     }
 ]
