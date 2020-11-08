@@ -88,7 +88,7 @@ function Login() {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
                                         type="password"
-                                        placeholder="hunter2"
+                                        placeholder="GoTeamLiquid1"
                                         {...getFieldProps("password")}
                                         isInvalid={!!errors.password}
                                     />

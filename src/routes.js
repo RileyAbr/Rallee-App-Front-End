@@ -5,11 +5,11 @@ import Home from "./components/Home";
 import Message from "./components/Message";
 
 const routes = [
-    { path: "/login", component: Login },
-    { path: "/signup", component: SignUp },
-    { path: "/profile", component: Profile },
-    { path: "/message", component: Message },
-    { path: "/", component: Home, exact: true }
+    { path: "/login", render: (props) => <Login {...props} /> },
+    { path: "/signup", render: (props) => <SignUp {...props} /> },
+    { path: "/profile", render: (props) => <Profile {...props} /> },
+    { path: "/message", render: (props) => <Home {...props} /> },
+    { path: "/", render: (props) => <Message {...props} /> }
 ];
 
 export default routes;

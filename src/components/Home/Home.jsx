@@ -20,7 +20,6 @@ function Home() {
     const handleFormChange = (filters) => {
         setFilter(filters);
         setGalleryPlayers(playerApi.getAllFilteredGames(filters));
-        console.log(JSON.stringify(filters));
     };
 
     return (
