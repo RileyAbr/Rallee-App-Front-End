@@ -8,7 +8,7 @@ import GameProfiles from "./GameProfiles";
 function ProfileForm() {
     return (
         <EdgedCardFormLarge>
-            <h2>$$$Username</h2>
+            <h2>Hello [Name], GLHF!</h2>
 
             <FormDivider />
 
