@@ -11,6 +11,7 @@ import PlayerApi from "../../service/playerApi";
 
 function Home() {
     const playerApi = new PlayerApi();
+    const [filter, setFilter] = useState();
 
     const [galleryPlayers] = useState(
         // playerApi.getAllGames()
