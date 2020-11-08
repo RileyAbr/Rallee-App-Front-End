@@ -13,23 +13,16 @@ function Home() {
     const playerApi = new PlayerApi();
 
     const [filter, setFilter] = useState(0);
+    const [galleryPlayers, setGalleryPlayers] = useState(
+        playerApi.getAllFilteredGames(filter)
+    );
 
-    let exampleFilter = { game: "League of Legends", language: "Spanish" };
-
-    const filters = {
-        game: "",
-        language: "",
-        maxRank: "",
-        minRank: "",
-        timezone: "",
-        comp: ""
-    };
-
-    const [galleryPlayers] = useState(playerApi.getAllFilteredGames(filters));
-
-    const handleChange = () => {
+    const handleFormChange = (filters) => {
         setFilter(filters);
+        setGalleryPlayers(playerApi.getAllFilteredGames(filters));
+        console.log(JSON.stringify(filters));
     };
+
     return (
         <ContentPage>
             <Container fluid>
@@ -38,15 +31,7 @@ function Home() {
                         <CardGallery players={galleryPlayers} />
                     </Col>
                     <Col className="home-controls-wrapper" xl="3">
-                        <FilterBar
-                        // onChange={handleChange}
-                        // games={filters.game}
-                        // language={filters.language}
-                        // maxRank={filters.maxRank}
-                        // minRank={filters.minRank}
-                        // timezone={filters.timezone}
-                        // comp={filters.comp}
-                        />
+                        <FilterBar formChangeCallback={handleFormChange} />
                     </Col>
                 </Row>
             </Container>
