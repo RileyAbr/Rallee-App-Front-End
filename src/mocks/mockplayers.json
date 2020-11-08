@@ -3,9 +3,45 @@
         "id": "1",
         "firstName": "Riley",
         "lastName": "Abrahamson",
-        "email": "blue@teamliquid.com",
-        "bio": "Riley really likes coldstone cake batter ice cream. Riley really likes coldstone cake batter ice cream. Riley really likes coldstone cake batter ice cream. Riley really likes coldstone cake batter ice cream.",
+        "email": "tristanamainbtw@lol.com",
+        "bio": "Hey there! I'm a mid-tier ADC main and the President of my university's League of Legends club. I love playing with engage supports and winning games before 20!",
         "languages": ["English"],
         "timezone": "(GMT-06:00) Central Time (US & Canada)"
+    },
+    {
+        "id": "2",
+        "firstName": "Marguerite",
+        "lastName": "Brugger",
+        "email": "enchmain@valve.com",
+        "bio": "I am the competitive lead for Dota2 at the University of Minnesota, Twin Cities, and I have been playing Dota2 for 3 years.",
+        "languages": ["English", "French", "Spanish"],
+        "timezone": "(GMT-06:00) Central Time (US & Canada)"
+    },
+    {
+        "id": "3",
+        "firstName": "Alex",
+        "lastName": "Leska",
+        "email": "pizzaparty@university.com",
+        "bio": "Hi! I enjoy playing valorant, dota, and league with my friends, and play relatively often.",
+        "languages": ["English", "Hindi"],
+        "timezone": "(GMT-06:00) Central Time (US & Canada)"
+    },
+    {
+        "id": "4",
+        "firstName": "Emily",
+        "lastName": "Clark",
+        "email": "flynn@thebestdog.com",
+        "bio": "I have the best dog in the world, and also a dumb cat that I love so much.",
+        "languages": ["English", "Arabic", "Mandarin"],
+        "timezone": "(GMT-08:00) Pacific Time (US & Canada)"
+    }
+    {
+        "id": "5",
+        "firstName": "Oliver",
+        "lastName": "The Cat",
+        "email": "dakatt@aol.com",
+        "bio": "I only like you if you feed me, but also I don't, am cat.",
+        "languages": ["English","Spanish"],
+        "timezone": "(GMT-08:00) Pacific Time (US & Canada)"
     }
 ]
