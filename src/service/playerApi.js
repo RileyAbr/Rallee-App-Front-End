@@ -1,5 +1,7 @@
 import mockPlayers from "../mocks/mockplayers.json";
 
+import { filterArray } from "./utils";
+
 class PlayerApi {
     constructor() {
         this.mockPlayers = mockPlayers;
@@ -60,6 +62,16 @@ class PlayerApi {
         });
 
         return gameProfiles;
+    }
+
+    getAllFilteredGames(filters) {
+        const allGames = this.getAllGames();
+
+        if (!filters) {
+            return allGames;
+        }
+
+        return filterArray(allGames, filters);
     }
 }
 
