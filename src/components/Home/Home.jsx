@@ -13,10 +13,10 @@ function Home() {
     const playerApi = new PlayerApi();
     const [filter, setFilter] = useState();
 
+    let exampleFilter = { game: "League of Legends" };
+
     const [galleryPlayers] = useState(
-        playerApi.getAllFilteredGames({
-            language: "French"
-        })
+        playerApi.getAllFilteredGames(exampleFilter)
     );
 
     return (
