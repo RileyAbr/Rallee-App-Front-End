@@ -1,6 +1,4 @@
 import React from "react";
-import { Form } from "react-bootstrap";
-import { Formik } from "formik";
 
 import EdgedCard from "../../EdgedCard";
 import FormDivider from "../../FormDivider";
