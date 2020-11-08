@@ -1,20 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import PlayerCard from "../PlayerCard";
 import "./CardGallery.scss";
 
-import PlayerApi from "../../service/playerApi";
-
-const CardGallery = () => {
-    const playerApi = new PlayerApi();
-
-    const [galleryPlayers, setGalleryPlayers] = useState(
-        playerApi.getAllPlayers()
-    );
-
+const CardGallery = (props) => {
     return (
         <div className="card-gallery">
             {" "}
-            {galleryPlayers.map((player, i) => {
+            {props.players.map((player, i) => {
                 return (
                     <PlayerCard
                         key={i}

@@ -16,11 +16,11 @@ function Header() {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="">
+                {/* <Nav className="">
                     <Nav.Link as={NavLink} to="/" exact>
                         Inbox
                     </Nav.Link>
-                </Nav>
+                </Nav> */}
                 <Nav className="">
                     <Nav.Link as={NavLink} to="/message">
                         Message

@@ -17,6 +17,12 @@ class PlayerApi {
         return this.mockPlayers;
     }
 
+    getAllPlayersFilters(filters) {
+        return this.mockPlayers.filter((player) => {
+            return true;
+        });
+    }
+
     getPlayersByLanguages(filterLanguages) {
         return this.mockPlayers.filter((player) =>
             player.languages.some(
@@ -29,6 +35,30 @@ class PlayerApi {
         return this.mockPlayers.filter(
             (player) => player.timezone === filterTimezone
         );
+    }
+
+    getPlayersByGame(filterGame) {
+        return this.mockPlayers.filter((player) =>
+            player.games.some((game) => game.game === filterGame)
+        );
+    }
+
+    getPlayersByCompStatus(filterCompStatus) {
+        return this.mockPlayers.filter((player) =>
+            player.games.some((game) => game.comp === filterCompStatus)
+        );
+    }
+
+    getAllGames() {
+        let gameProfiles = [];
+
+        this.mockPlayers.forEach((player) => {
+            player.games.forEach((game) => {
+                gameProfiles.push(game);
+            });
+        });
+
+        return gameProfiles;
     }
 }
 
