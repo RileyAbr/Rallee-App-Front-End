@@ -109,6 +109,7 @@ function Login() {
             <img
                 src={blueTransparent}
                 alt=""
+                loading="lazy"
                 style={{
                     position: "fixed",
                     right: "0",
