@@ -1,0 +1,19 @@
+[
+    {
+        "id": "1",
+        "game": "League of Legends",
+        "comp": "Casual",
+        "username": "D.Boy9",
+        "rank": "Crusader IV",
+        "roles": [
+            "Safe Lane",
+            "Mid Lane",
+            "Off Lane",
+            "Soft Support",
+            "Hard Support"
+        ],
+        "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/dota_logo.png",
+        "pic": "https://i.pinimg.com/originals/dc/50/52/dc5052052797c3eaebc75591efde2f00.jpg",
+        "rankmedal": "https://platform.z3ddota.com/storage/embedded/files/15883169612158r6.png"
+    }
+]
