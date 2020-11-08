@@ -11,7 +11,7 @@ import valorantRanks from "../../mocks/mockValorantRanks.json";
 
 const gameToRanks = {
     "League of Legends": lolRanks,
-    "Dota 2": dotaRanks,
+    Dota2: dotaRanks,
     VALORANT: valorantRanks
 };
 
@@ -87,20 +87,15 @@ const FilterBar = (props) => {
                                         {...getFieldProps("rank")}
                                     >
                                         <option value="">All Ranks</option>
-                                        <option value="immortal">
-                                            Immortal
-                                        </option>
-                                        <option value="divine">Divine</option>
-                                        <option value="ancient">Ancient</option>
-                                        <option value="legend">Legend</option>
-                                        <option value="archon">Archon</option>
-                                        <option value="crusader">
-                                            Crusader
-                                        </option>
-                                        <option value="guardian">
-                                            Guardian
-                                        </option>
-                                        <option value="herald">Herald</option>
+                                        {gameToRanks[formValues.game].map(
+                                            (rank) => {
+                                                return (
+                                                    <option value={rank}>
+                                                        {rank}
+                                                    </option>
+                                                );
+                                            }
+                                        )}
                                     </Form.Control>
                                 </Form.Group>
                             )}

@@ -80,6 +80,9 @@ class PlayerApi {
             filterParams["languages"] = (languages) =>
                 languages.find((language) => language === filters.language);
         }
+        if (filters.rank) {
+            filterParams["rank"] = (rank) => rank === filters.rank;
+        }
         if (filters.timezone) {
             filterParams["timezone"] = (timezone) =>
                 timezone === filters.timezone;
