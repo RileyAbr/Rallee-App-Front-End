@@ -11,12 +11,25 @@ import PlayerApi from "../../service/playerApi";
 
 function Home() {
     const playerApi = new PlayerApi();
-    const [filter, setFilter] = useState();
+
+    const [filter, setFilter] = useState(0);
 
     let exampleFilter = { game: "League of Legends", language: "Spanish" };
 
-    const [galleryPlayers] = useState(playerApi.getAllFilteredGames());
+    const filters = {
+        game: "",
+        language: "",
+        maxRank: "",
+        minRank: "",
+        timezone: "",
+        comp: ""
+    };
 
+    const [galleryPlayers] = useState(playerApi.getAllFilteredGames(filters));
+
+    const handleChange = () => {
+        setFilter(filters);
+    };
     return (
         <ContentPage>
             <Container fluid>
@@ -25,7 +38,15 @@ function Home() {
                         <CardGallery players={galleryPlayers} />
                     </Col>
                     <Col className="home-controls-wrapper" xl="3">
-                        <FilterBar />
+                        <FilterBar
+                        // onChange={handleChange}
+                        // games={filters.game}
+                        // language={filters.language}
+                        // maxRank={filters.maxRank}
+                        // minRank={filters.minRank}
+                        // timezone={filters.timezone}
+                        // comp={filters.comp}
+                        />
                     </Col>
                 </Row>
             </Container>

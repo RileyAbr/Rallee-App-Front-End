@@ -64,9 +64,9 @@ function GameProfiles() {
                             <Form.Group as={Col} controlId="formLoginEmail">
                                 <Form.Label>Rank</Form.Label>
                                 <Form.Control as="select" custom>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
+                                    <option>L1</option>
+                                    <option>L2</option>
+                                    <option>L3</option>
                                 </Form.Control>
                                 <Form.Control.Feedback type="invalid">
                                     {errors.rank}
@@ -75,20 +75,36 @@ function GameProfiles() {
                         </Form.Row>
 
                         <Form.Group controlId="formLoginEmail">
-                            <Form.Label>Role</Form.Label>
-                            <Form.Control as="select" custom>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </Form.Control>
-                            <Form.Control.Feedback type="invalid">
-                                {errors.role}
-                            </Form.Control.Feedback>
+                            <Form.Label>Roles</Form.Label>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flexFlow: "row wrap"
+                                }}
+                            >
+                                {[
+                                    "Safe Lane",
+                                    "Mid Lane",
+                                    "Off Lane",
+                                    "Soft Support",
+                                    "Hard Support"
+                                ].map((language) => (
+                                    <div key={language} className="m-3">
+                                        <Form.Check
+                                            custom
+                                            type="checkbox"
+                                            id={`checkbox-${language}`}
+                                            label={language}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                         </Form.Group>
 
                         <Button
-                            variant="secondary"
+                            variant="success"
                             type="submit"
+                            block
                             style={{
                                 display: "block",
                                 margin: "0 auto"

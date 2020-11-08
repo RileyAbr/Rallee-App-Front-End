@@ -119,8 +119,9 @@ function PersonalProfile() {
                     </Form.Group>
 
                     <Button
-                        variant="secondary"
+                        variant="success"
                         type="submit"
+                        block
                         style={{
                             display: "block",
                             margin: "0 auto"

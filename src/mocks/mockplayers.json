@@ -73,11 +73,11 @@
             {
                 "game": "VALORANT",
                 "comp": "Casual",
-                "username": "iamfurnishment",
+                "username": "iamfurnish",
                 "rank": "Bronze 3",
                 "roles": ["Rifler"],
                 "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/valorant_logo.png",
-                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-0.jpg",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-10.jpg",
                 "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank6.png"
             }
         ]
@@ -150,7 +150,7 @@
                 "rank": "Diamond 3",
                 "roles": ["Rifler", "Op'er"],
                 "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/valorant_logo.png",
-                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-3.jpg",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-4.jpg",
                 "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank18.png"
             }
         ]
@@ -204,7 +204,7 @@
                 "rank": "Radiant",
                 "roles": ["Rifler", "Op'er"],
                 "gamelogo": "https://dtpdgpkh8yk1n.cloudfront.net/valorant_logo.png",
-                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-12.jpg",
+                "pic": "https://dtpdgpkh8yk1n.cloudfront.net/valorant-card-7.jpg",
                 "rankmedal": "https://dtpdgpkh8yk1n.cloudfront.net/valrank22.png"
             }
         ]
