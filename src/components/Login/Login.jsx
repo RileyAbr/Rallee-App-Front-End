@@ -42,7 +42,7 @@ function Login() {
             .required("Please enter your password")
             .matches(
                 /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-                "Your password must 8 characters long and contain at least one letter and one number"
+                "Invalid Password (must contain at least 8 characters, one letter and one number)"
             )
     });
 
