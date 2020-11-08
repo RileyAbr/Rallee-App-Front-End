@@ -36,7 +36,7 @@ function GameProfiles() {
     return (
         <>
             <Form.Label>Select Game:</Form.Label>
-            <Form.Control as="select" custom>
+            <Form.Control as="select" custom name="gamechoice">
                 <option>League of Legends</option>
                 <option>Dota 2</option>
                 <option>VALORANT</option>
