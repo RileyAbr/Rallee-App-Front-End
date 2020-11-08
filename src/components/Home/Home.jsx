@@ -11,9 +11,18 @@ import PlayerApi from "../../service/playerApi";
 
 function Home() {
     const playerApi = new PlayerApi();
+    const [filter, setFilter] = useState();
 
-    const [galleryPlayers, setGalleryPlayers] = useState(
-        playerApi.getAllGames()
+    const [galleryPlayers] = useState(
+        // playerApi.getAllGames()
+        playerApi.getAllFilteredGames({
+            game: (game) => game === "League of Legends",
+            languages: (languages) =>
+                languages.find((language) => language === "Spanish"),
+            timezone: (timezone) =>
+                timezone === "(GMT-06:00) Central Time (US & Canada)"
+        })
+        // playerApi.getAllFilteredGames()
     );
 
     return (
