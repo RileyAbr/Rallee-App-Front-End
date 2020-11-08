@@ -3,10 +3,10 @@ import React from "react";
 import ContentPage from "../ContentPage";
 import ProfileForm from "./ProfileForm";
 
-function Profile() {
+function Profile(props) {
     return (
         <ContentPage>
-            <ProfileForm />
+            <ProfileForm verifiedPlayer={props.verifiedPlayer} />
         </ContentPage>
     );
 }

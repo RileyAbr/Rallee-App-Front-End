@@ -5,7 +5,7 @@ import FormDivider from "../../FormDivider";
 import PersonalProfile from "./PersonalProfile";
 import GameProfiles from "./GameProfiles";
 
-function ProfileForm() {
+function ProfileForm(props) {
     return (
         <EdgedCardFormLarge>
             <h2>Hello [Name], GLHF!</h2>
@@ -13,7 +13,7 @@ function ProfileForm() {
             <FormDivider />
 
             <h3>Personal Profile</h3>
-            <PersonalProfile />
+            <PersonalProfile {...props.verifiedPlayer} />
 
             <FormDivider />
 

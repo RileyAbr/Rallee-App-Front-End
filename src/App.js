@@ -1,31 +1,32 @@
 import React, { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
-import routes from "./routes";
+import routes, { loginRoutes } from "./routes";
 
 import PlayerApi from "./service/playerApi";
 
 function App() {
     const playerApi = new PlayerApi();
-    const [verifiedPlayer, setVerifiedPlayer] = useState(
+    const [verifiedPlayer] = useState(
         playerApi.getPlayerByEmail("player@lol.com")
     );
-
-    // const handleLogin = () => { };
 
     return (
         <>
             <Switch>
-                {/* Redirect anything that is more than a single url param */}
-                {routes.map((route, i) => {
+                {loginRoutes.map((route, i) => {
                     return (
                         <Route
-                            key={i}
-                            verifiedPlayer={verifiedPlayer}
+                            key={i} //onLogin={handleLogin}
                             {...route}
                         />
                     );
                 })}
+
+                {routes.map((route, i) => {
+                    return route.render(verifiedPlayer);
+                })}
+
                 <Route path="*">
                     <Redirect to="/" />
                 </Route>

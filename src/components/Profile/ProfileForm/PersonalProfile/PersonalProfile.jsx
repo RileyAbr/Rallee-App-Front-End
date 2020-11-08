@@ -2,21 +2,23 @@ import React from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { useHistory } from "react-router-dom";
 
 import "./PersonalProfile.scss";
 
-function PersonalProfile() {
+function PersonalProfile(props) {
+    const history = useHistory();
+
     const initialValues = {
-        username: "",
-        firstName: "",
-        lastName: "",
-        email: "",
-        bio: ""
+        firstName: props.firstName,
+        lastName: props.lastName,
+        email: props.email,
+        bio: props.bio
     };
 
     const onSubmit = () => {
         // TODO: Post to backend
-        alert("User updated!");
+        history.push("/");
     };
 
     const validationSchema = yup.object({

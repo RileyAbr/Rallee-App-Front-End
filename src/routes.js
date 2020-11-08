@@ -4,12 +4,37 @@ import Profile from "./components/Profile";
 import Home from "./components/Home";
 import Message from "./components/Message";
 
+import { Route } from "react-router-dom";
+
 const routes = [
-    { path: "/login", render: (props) => <Login {...props} /> },
-    { path: "/signup", render: (props) => <SignUp {...props} /> },
-    { path: "/profile", render: (props) => <Profile {...props} /> },
-    { path: "/message", render: (props) => <Home {...props} /> },
-    { path: "/", render: (props) => <Message {...props} /> }
+    {
+        render: (props) => (
+            <Route path="/profile">
+                <Profile verifiedPlayer={props} />
+            </Route>
+        )
+    },
+    {
+        render: (props) => (
+            <Route path="/message">
+                <Message verifiedPlayer={props} />
+            </Route>
+        )
+    },
+    {
+        render: (props) => (
+            <Route path="/" exact>
+                <Home verifiedPlayer={props} />
+            </Route>
+        )
+    }
 ];
+
+const loginRoutes = [
+    { path: "/login", render: (props) => <Login {...props} /> },
+    { path: "/signup", render: (props) => <SignUp {...props} /> }
+];
+
+export { loginRoutes };
 
 export default routes;
