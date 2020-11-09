@@ -9,22 +9,22 @@ import { Route } from "react-router-dom";
 const routes = [
     {
         render: (props) => (
-            <Route path="/profile">
-                <Profile verifiedPlayer={props} />
+            <Route key={props.i} path="/profile">
+                <Profile verifiedPlayer={props.verifiedPlayer} />
             </Route>
         )
     },
     {
         render: (props) => (
-            <Route path="/message">
-                <Message verifiedPlayer={props} />
+            <Route key={props.i} path="/message">
+                <Message verifiedPlayer={props.verifiedPlayer} />
             </Route>
         )
     },
     {
         render: (props) => (
-            <Route path="/" exact>
-                <Home verifiedPlayer={props} />
+            <Route key={props.i} path="/" exact>
+                <Home verifiedPlayer={props.verifiedPlayer} />
             </Route>
         )
     }

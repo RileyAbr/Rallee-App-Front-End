@@ -15,16 +15,11 @@ function App() {
         <>
             <Switch>
                 {loginRoutes.map((route, i) => {
-                    return (
-                        <Route
-                            key={i} //onLogin={handleLogin}
-                            {...route}
-                        />
-                    );
+                    return <Route key={i} {...route} />;
                 })}
 
                 {routes.map((route, i) => {
-                    return route.render(verifiedPlayer);
+                    return route.render({ verifiedPlayer, i });
                 })}
 
                 <Route path="*">

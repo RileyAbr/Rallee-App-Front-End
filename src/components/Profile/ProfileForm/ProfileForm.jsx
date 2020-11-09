@@ -18,7 +18,7 @@ function ProfileForm(props) {
             <FormDivider />
 
             <h3>Game Profiles</h3>
-            <GameProfiles />
+            <GameProfiles {...props.verifiedPlayer} />
         </EdgedCardFormLarge>
     );
 }
