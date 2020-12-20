@@ -9,7 +9,7 @@ import FormDivider from "../FormDivider";
 
 import blueTransparent from "../../assets/blue_transparent.png";
 
-import PlayerApi from "../../service/playerApi";
+import PlayerApi from "../../services/playerApi";
 
 function Login() {
     const history = useHistory();
