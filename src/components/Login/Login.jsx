@@ -23,7 +23,6 @@ function Login() {
     };
 
     const onSubmit = (values) => {
-        // TODO: Connect to backend
         const verifiedPlayer = playerApi.getPlayerByEmail(values.email);
 
         if (verifiedPlayer) {
