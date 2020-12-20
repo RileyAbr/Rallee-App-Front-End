@@ -5,6 +5,8 @@ import routes, { loginRoutes } from "./routes";
 
 import PlayerApi from "./services/playerApi";
 
+import NewRoutes from "./NewRoutes";
+
 function App() {
     const playerApi = new PlayerApi();
     const [verifiedPlayer] = useState(
@@ -14,7 +16,8 @@ function App() {
     return (
         <>
             <Switch>
-                {loginRoutes.map((route, i) => {
+                <NewRoutes />
+                {/* {loginRoutes.map((route, i) => {
                     return <Route key={i} {...route} />;
                 })}
 
@@ -24,7 +27,7 @@ function App() {
 
                 <Route path="*">
                     <Redirect to="/" />
-                </Route>
+                </Route> */}
             </Switch>
         </>
     );
