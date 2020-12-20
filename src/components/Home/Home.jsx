@@ -7,7 +7,7 @@ import ContentPage from "../ContentPage";
 import CardGallery from "../CardGallery";
 import FilterBar from "../FilterBar";
 
-import PlayerApi from "../../services/playerApi";
+import PlayerApi from "../../service/playerApi";
 
 function Home() {
     const playerApi = new PlayerApi();

@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 
 import routes, { loginRoutes } from "./routes";
 
-import PlayerApi from "./services/playerApi";
+import PlayerApi from "./service/playerApi";
 
 function App() {
     const playerApi = new PlayerApi();
