@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom";
 
 import "./Header.scss";
 
-import { logOutPlayer } from "../../services/mockAuthService";
-
 function Header() {
     return (
         <Navbar className="header-nav" variant="dark" expand="lg">
@@ -34,11 +32,7 @@ function Header() {
                     </Nav.Link>
                 </Nav>
                 <Nav className={("mr-auto", "justify-content-end")}>
-                    <Nav.Link
-                        as={NavLink}
-                        to="/login"
-                        onClick={() => logOutPlayer()}
-                    >
+                    <Nav.Link as={NavLink} to="/login">
                         Logout
                     </Nav.Link>
                 </Nav>
