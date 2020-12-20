@@ -1,30 +1,23 @@
-import React, { useState } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import AuthRoute from "./components/AuthRoute";
 
-import routes, { loginRoutes } from "./routes";
-
-import PlayerApi from "./service/playerApi";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import Home from "./components/Home";
+import Profile from "./components/Profile";
+import Message from "./components/Message";
 
 function App() {
-    const playerApi = new PlayerApi();
-    const [verifiedPlayer] = useState(
-        playerApi.getPlayerByEmail("player@lol.com")
-    );
-
     return (
         <>
             <Switch>
-                {loginRoutes.map((route, i) => {
-                    return <Route key={i} {...route} />;
-                })}
-
-                {routes.map((route, i) => {
-                    return route.render({ verifiedPlayer, i });
-                })}
-
-                <Route path="*">
-                    <Redirect to="/" />
-                </Route>
+                <Route path="/login" component={Login} />
+                <Route path="/signup" component={SignUp} />
+                <AuthRoute exact={true} path="/" component={Home} />
+                <AuthRoute path="/profile" component={Profile} />
+                <AuthRoute path="/message" component={Message} />
+                <AuthRoute component={Home} />
             </Switch>
         </>
     );

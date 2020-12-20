@@ -9,7 +9,8 @@ import FormDivider from "../FormDivider";
 
 import blueTransparent from "../../assets/blue_transparent.png";
 
-import PlayerApi from "../../service/playerApi";
+import { logInPlayer } from "../../services/mockAuthService";
+import PlayerApi from "../../services/playerApi";
 
 function Login() {
     const history = useHistory();
@@ -22,10 +23,10 @@ function Login() {
     };
 
     const onSubmit = (values) => {
-        // TODO: Connect to backend
         const verifiedPlayer = playerApi.getPlayerByEmail(values.email);
 
         if (verifiedPlayer) {
+            logInPlayer();
             history.push("/");
         } else {
             setInvalidLoginError(true);

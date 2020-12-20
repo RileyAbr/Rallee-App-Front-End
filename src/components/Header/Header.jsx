@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
+import { logOutPlayer } from "../../services/mockAuthService";
+
 import "./Header.scss";
 
 function Header() {
@@ -16,11 +18,6 @@ function Header() {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                {/* <Nav className="">
-                    <Nav.Link as={NavLink} to="/" exact>
-                        Inbox
-                    </Nav.Link>
-                </Nav> */}
                 <Nav className="">
                     <Nav.Link as={NavLink} to="/message">
                         Message
@@ -32,7 +29,11 @@ function Header() {
                     </Nav.Link>
                 </Nav>
                 <Nav className={("mr-auto", "justify-content-end")}>
-                    <Nav.Link as={NavLink} to="/login">
+                    <Nav.Link
+                        as={NavLink}
+                        to="/login"
+                        onClick={() => logOutPlayer()}
+                    >
                         Logout
                     </Nav.Link>
                 </Nav>
