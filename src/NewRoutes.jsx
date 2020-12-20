@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import AuthRoute from "./components/AuthRoute";
 
 import Login from "./components/Login";
@@ -9,13 +9,13 @@ import Message from "./components/Message";
 
 const NewRoutes = () => {
     return (
-        <>
+        <Switch>
             <Route path="/login" component={Login}></Route>
             <AuthRoute exact={true} path="/" component={Home} />
             <AuthRoute path="/profile" component={Profile} />
             <AuthRoute path="/message" component={Message} />
             <AuthRoute component={Home} />
-        </>
+        </Switch>
     );
 };
 

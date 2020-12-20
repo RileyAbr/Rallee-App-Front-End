@@ -15,9 +15,9 @@ function App() {
 
     return (
         <>
-            <Switch>
-                <NewRoutes />
-                {/* {loginRoutes.map((route, i) => {
+            {/* <Switch> */}
+            <NewRoutes />
+            {/* {loginRoutes.map((route, i) => {
                     return <Route key={i} {...route} />;
                 })}
 
@@ -28,7 +28,7 @@ function App() {
                 <Route path="*">
                     <Redirect to="/" />
                 </Route> */}
-            </Switch>
+            {/* </Switch> */}
         </>
     );
 }
