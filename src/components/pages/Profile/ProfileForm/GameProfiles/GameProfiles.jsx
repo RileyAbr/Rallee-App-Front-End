@@ -27,7 +27,7 @@ const gameToRanks = {
 
 function GameProfiles() {
     const history = useHistory();
-    const [selectedGame, setSelectedGame] = useState(gameToRanks[0]);
+    const [selectedGame, setSelectedGame] = useState("League of Legends");
 
     const initialValues = {
         username: "",
@@ -69,11 +69,12 @@ function GameProfiles() {
                 as="select"
                 custom
                 name="gamechoice"
-                onChange={() => onGameSelectChange}
+                onChange={(e) => onGameSelectChange(e)}
+                value={selectedGame}
             >
-                <option>League of Legends</option>
-                <option>Dota 2</option>
-                <option>VALORANT</option>
+                <option value="League of Legends">League of Legends</option>
+                <option value="Dota2">Dota 2</option>
+                <option value="VALORANT">VALORANT</option>
             </Form.Control>
 
             <FormDivider />
@@ -97,19 +98,30 @@ function GameProfiles() {
 
                             <Form.Group as={Col} controlId="formLoginEmail">
                                 <Form.Label>Rank</Form.Label>
-                                <Form.Control as="select" custom>
-                                    {/* {gameToRanks[selectedGame].map(
-                                        (rank, i) => {
-                                            return (
-                                                <option key={i} value={rank}>
-                                                    {rank}
-                                                </option>
-                                            );
-                                        }
-                                    )} */}
-                                    {gameToRanks[selectedGame].map((rank) => {
-                                        return rank;
-                                    })}
+                                <Form.Control
+                                    as="select"
+                                    custom
+                                    name="gamerank"
+                                >
+                                    {selectedGame &&
+                                        gameToRanks[selectedGame].map(
+                                            (rank, i) => {
+                                                return (
+                                                    <option
+                                                        key={i}
+                                                        value={rank}
+                                                    >
+                                                        {rank}
+                                                    </option>
+                                                );
+                                            }
+                                        )}
+                                    {selectedGame &&
+                                        gameToRanks[selectedGame].map(
+                                            (rank) => {
+                                                return rank;
+                                            }
+                                        )}
                                 </Form.Control>
 
                                 <Form.Control.Feedback type="invalid">
@@ -126,16 +138,17 @@ function GameProfiles() {
                                     flexFlow: "row wrap"
                                 }}
                             >
-                                {gameToRoles[selectedGame].map((role, i) => (
-                                    <div key={i} className="m-3">
-                                        <Form.Check
-                                            custom
-                                            type="checkbox"
-                                            id={`checkbox-${role}`}
-                                            label={role}
-                                        />
-                                    </div>
-                                ))}
+                                {selectedGame &&
+                                    gameToRoles[selectedGame].map((role, i) => (
+                                        <div key={i} className="m-3">
+                                            <Form.Check
+                                                custom
+                                                type="checkbox"
+                                                id={`checkbox-${role}`}
+                                                label={role}
+                                            />
+                                        </div>
+                                    ))}
                             </div>
                         </Form.Group>
 
