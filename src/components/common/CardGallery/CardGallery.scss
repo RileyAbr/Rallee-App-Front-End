@@ -1,10 +1,15 @@
 @import "../../../custom.scss";
 
 .card-gallery {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-flow: row wrap;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 20px;
+    place-items: center;
 
     @media only screen and (max-width: $tablet-width) {
-        justify-content: center;
+        // justify-content: center;
     }
 }

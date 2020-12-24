@@ -80,6 +80,7 @@ const PlayerCard = (props) => {
                     </Card.ImgOverlay>
                 </EdgedCard>
             </Button>
+
             <Modal centered show={show} onHide={handleClose}>
                 <Card.Img className="modal-image" src={`${props.pic}`} />
                 <Card.ImgOverlay style={{ padding: "0.3rem" }}>
@@ -112,33 +113,6 @@ const PlayerCard = (props) => {
                     </Modal.Header>
                     <Modal.Body>
                         <div>
-                            {/* <button
-                                type="button"
-                                className="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div
-                                style={{
-                                    fontSize: "3rem",
-                                    fontFamily:
-                                        "'Saira Stencil One', sans-serif",
-                                    textAlign: "left"
-                                }}
-                            >
-                                {`${props.username}`}{" "}
-                                <Image
-                                    style={{
-                                        paddingRight: "20px",
-                                        paddingTop: "5px",
-                                        height: "4rem",
-                                        float: "right"
-                                    }}
-                                    src={`${props.gamelogo}`}
-                                />
-                            </div> */}
                             <div
                                 style={{
                                     fontSize: "1.2rem"
