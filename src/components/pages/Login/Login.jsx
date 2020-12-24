@@ -5,12 +5,12 @@ import { Formik } from "formik";
 import * as yup from "yup";
 
 import AdditionalLoginOptions from "./AdditionalLoginOptions";
-import FormDivider from "../FormDivider";
+import FormDivider from "../../common/FormDivider";
 
-import blueTransparent from "../../assets/blue_transparent.png";
+import blueTransparent from "../../../assets/blue_transparent.png";
 
-import { logInPlayer } from "../../services/mockAuthService";
-import PlayerApi from "../../services/playerApi";
+import { logInPlayer } from "../../../services/mockAuthService";
+import PlayerApi from "../../../services/playerApi";
 
 function Login() {
     const history = useHistory();

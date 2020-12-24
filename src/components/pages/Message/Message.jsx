@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContentPage from "../ContentPage";
+import ContentPage from "../../common/ContentPage";
 import MessageForm from "./MessageForm";
 
 function Message() {

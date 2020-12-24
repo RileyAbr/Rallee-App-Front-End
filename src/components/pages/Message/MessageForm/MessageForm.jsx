@@ -4,8 +4,8 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { useHistory } from "react-router-dom";
 
-import EdgedCardFormLarge from "../../EdgedCardFormLarge";
-import FormDivider from "../../FormDivider";
+import EdgedCardFormLarge from "../../../common/EdgedCardFormLarge";
+import FormDivider from "../../../common/FormDivider";
 
 function MessageForm() {
     const history = useHistory();

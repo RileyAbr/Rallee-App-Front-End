@@ -5,9 +5,9 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { Link } from "react-router-dom";
 
-import FormDivider from "../FormDivider";
+import FormDivider from "../../common/FormDivider";
 
-import blueTransparent from "../../assets/blue_transparent.png";
+import blueTransparent from "../../../assets/blue_transparent.png";
 
 function SignUp() {
     const history = useHistory();

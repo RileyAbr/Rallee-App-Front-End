@@ -3,9 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import "./Home.scss";
 
-import ContentPage from "../ContentPage";
+import ContentPage from "../../common/ContentPage";
 import CardGallery from "../../common/CardGallery";
-import FilterBar from "../FilterBar";
+import FilterBar from "../../common/FilterBar";
 
 import PlayerApi from "../../../services/playerApi";
 

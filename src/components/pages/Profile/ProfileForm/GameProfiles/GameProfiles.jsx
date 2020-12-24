@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { Formik } from "formik";
 import * as yup from "yup";
-import FormDivider from "../../../FormDivider";
+import FormDivider from "../../../../common/FormDivider";
 import { useHistory } from "react-router-dom";
 
-import lolRoles from "../../../../mocks/mockLolRoles.json";
-import dotaRoles from "../../../../mocks/mockDotaRoles.json";
-import valorantRoles from "../../../../mocks/mockValorantRoles.json";
+import lolRoles from "../../../../../mocks/mockLolRoles.json";
+import dotaRoles from "../../../../../mocks/mockDotaRoles.json";
+import valorantRoles from "../../../../../mocks/mockValorantRoles.json";
 
-import lolRanks from "../../../../mocks/mockLolRanks.json";
-import dotaRanks from "../../../../mocks/mockDotaRanks.json";
-import valorantRanks from "../../../../mocks/mockValorantRanks.json";
+import lolRanks from "../../../../../mocks/mockLolRanks.json";
+import dotaRanks from "../../../../../mocks/mockDotaRanks.json";
+import valorantRanks from "../../../../../mocks/mockValorantRanks.json";
 
 const gameToRoles = {
     "League of Legends": lolRoles,
@@ -107,12 +107,11 @@ function GameProfiles() {
                                             );
                                         }
                                     )} */}
-                                </Form.Control>
-                                {gameToRanks["League of Legends"].map(
-                                    (rank) => {
+                                    {gameToRanks[selectedGame].map((rank) => {
                                         return rank;
-                                    }
-                                )}
+                                    })}
+                                </Form.Control>
+
                                 <Form.Control.Feedback type="invalid">
                                     {errors.rank}
                                 </Form.Control.Feedback>
@@ -127,19 +126,13 @@ function GameProfiles() {
                                     flexFlow: "row wrap"
                                 }}
                             >
-                                {[
-                                    "Safe Lane",
-                                    "Mid Lane",
-                                    "Off Lane",
-                                    "Soft Support",
-                                    "Hard Support"
-                                ].map((language, i) => (
+                                {gameToRoles[selectedGame].map((role, i) => (
                                     <div key={i} className="m-3">
                                         <Form.Check
                                             custom
                                             type="checkbox"
-                                            id={`checkbox-${language}`}
-                                            label={language}
+                                            id={`checkbox-${role}`}
+                                            label={role}
                                         />
                                     </div>
                                 ))}

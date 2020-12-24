@@ -5,9 +5,9 @@ import { Form } from "react-bootstrap";
 import { Formik } from "formik";
 import * as yup from "yup";
 
-import lolRanks from "../../mocks/mockLolRanks.json";
-import dotaRanks from "../../mocks/mockDotaRanks.json";
-import valorantRanks from "../../mocks/mockValorantRanks.json";
+import lolRanks from "../../../mocks/mockLolRanks.json";
+import dotaRanks from "../../../mocks/mockDotaRanks.json";
+import valorantRanks from "../../../mocks/mockValorantRanks.json";
 
 const gameToRanks = {
     "League of Legends": lolRanks,
