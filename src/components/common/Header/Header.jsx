@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import { logOutPlayer } from "../../services/mockAuthService";
+import { logOutPlayer } from "../../../services/mockAuthService";
 
 import "./Header.scss";
 
