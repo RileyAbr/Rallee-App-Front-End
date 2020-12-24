@@ -83,9 +83,36 @@ const PlayerCard = (props) => {
             <Modal centered show={show} onHide={handleClose}>
                 <Card.Img className="modal-image" src={`${props.pic}`} />
                 <Card.ImgOverlay style={{ padding: "0.3rem" }}>
+                    <Modal.Header className="card-header" closeButton>
+                        <div
+                            style={{
+                                width: "100%",
+                                display: "flex",
+                                flexFlow: "row nowrap",
+                                alignItems: "center",
+                                justifyContent: "space-between"
+                            }}
+                        >
+                            <span
+                                style={{
+                                    fontSize: "3rem",
+                                    fontFamily:
+                                        "'Saira Stencil One', sans-serif"
+                                }}
+                            >
+                                {`${props.username}`}
+                            </span>
+                            <Image
+                                style={{
+                                    height: "4rem"
+                                }}
+                                src={`${props.gamelogo}`}
+                            />
+                        </div>
+                    </Modal.Header>
                     <Modal.Body>
                         <div>
-                            <button
+                            {/* <button
                                 type="button"
                                 className="close"
                                 data-dismiss="modal"
@@ -111,7 +138,7 @@ const PlayerCard = (props) => {
                                     }}
                                     src={`${props.gamelogo}`}
                                 />
-                            </div>
+                            </div> */}
                             <div
                                 style={{
                                     fontSize: "1.2rem"
