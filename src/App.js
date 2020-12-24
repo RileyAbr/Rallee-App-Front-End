@@ -2,11 +2,11 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import AuthRoute from "./components/AuthRoute";
 
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import Home from "./components/Home";
-import Profile from "./components/Profile";
-import Message from "./components/Message";
+import Login from "./components/pages/Login";
+import SignUp from "./components/pages/SignUp";
+import Home from "./components/pages/Home";
+import Profile from "./components/pages/Profile";
+import Message from "./components/pages/Message";
 
 function App() {
     return (

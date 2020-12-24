@@ -1,0 +1,101 @@
+@import "../../../custom.scss";
+
+$corner-cut: 30px;
+
+.card-selector {
+    padding: 1.4rem !important;
+}
+
+.card-image {
+    object-fit: cover;
+    filter: opacity(25%);
+    height: 300px;
+}
+
+.card-body {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.game-logo {
+    height: 2.5rem;
+    float: right;
+}
+
+.rank-medal {
+    margin: 0 auto;
+}
+
+.bio {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+.card-attribute {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.card-img-overlay {
+    padding: 0.3rem !important;
+}
+
+.card-attribute-value {
+    padding-right: 3rem;
+}
+
+.button-font {
+    font-size: 1.8rem;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+.close {
+    color: $baby-powder !important;
+}
+
+.modal {
+    filter: drop-shadow(0.5rem 0.5rem 0.5rem $oxford-blue);
+}
+
+.modal-body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.modal-backdrop {
+    background: linear-gradient(
+        135deg,
+        $aqua,
+        $violet-color-wheel,
+        $byzantine
+    ) !important;
+}
+
+.modal-content {
+    clip-path: polygon(
+        0px 0,
+        calc(100% - #{$corner-cut}) 0,
+        100% #{$corner-cut},
+        100% 100%,
+        #{$corner-cut} 100%,
+        0 calc(100% - #{$corner-cut}),
+        #{$corner-cut} 100%,
+        0 calc(100% - #{$corner-cut}),
+        0 #{$corner-cut}
+    );
+    background-color: $yale-blue !important;
+}
+
+.modal-image {
+    object-fit: cover;
+    filter: blur(0.4rem) opacity(40%);
+    height: 500px;
+}
