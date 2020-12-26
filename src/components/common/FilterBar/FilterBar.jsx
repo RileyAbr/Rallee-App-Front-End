@@ -36,6 +36,10 @@ const FilterBar = (props) => {
 
     const onFormChange = (values) => {
         if (values !== formValues) {
+            // If the user filters by rank, but then removes the game, the rank filter is also removed
+            if (values.rank && !values.game) {
+                values.rank = "";
+            }
             setFormValues(values);
             props.formChangeCallback(values);
         }
